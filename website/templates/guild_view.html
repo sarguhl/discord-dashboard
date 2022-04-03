@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}{{guild_name}}{% endblock %}
+{% block content %}
+<div class="main">
+  <div class="color-background"></div>
+  <div class="profile">
+    <div class="profile_content">
+      <h1>{{guild_name}}</h1>
+    </div>
+  </div>
+  <div class="linktree-marg"></div>
+  <div class="wrapper">
+    <div class="linktree">
+        <div class="stat_card">
+            <p><b>Current Members:</b> {{guild_members}}</p><br>
+            <p><b>Roles:</b> {{guild_roles}}</p><br>
+        </div>
+        <div class="stat_card">
+            <p><b>Name:</b> {{guild_name}}</p><br>
+            <p><b>Created:</b> {{guild_created}}</p><br>
+            <p><b>Prefix:</b> {{guild_prefix}}</p>
+        </div>
+        <!-- <h1>Member Overview</h1>
+        <div class="chart_wrapper"><canvas id="lineChart" ></canvas></div> -->
+        <script>
+            const colors = {
+                purple: {
+                    default: "rgb(93, 139, 244, 1)",
+                    half: "rgb(93, 139, 244, 0.5)",
+                    quarter: "rgb(93, 139, 244, 0.25)",
+                    zero: "rgb(93, 139, 244, 0)"
+                },
+                indigo: {
+                    default: "rgba(80, 102, 120, 1)",
+                    quarter: "rgba(80, 102, 120, 0.25)"
+                }
+            };
+
+            //Chart.defaults.global.legend.display = false;
+            var ctx = document.getElementById("lineChart").getContext("2d")
+
+            var gradient = ctx.createLinearGradient(0, 25, 0, 300);
+            gradient.addColorStop(0, colors.purple.half);
+            gradient.addColorStop(0.35, colors.purple.quarter);
+            gradient.addColorStop(1, colors.purple.zero);
+
+
+            var lineChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: {{ labels | safe }},
+                    datasets: [
+                        {
+                            
+                            color: "#fff",
+                            labels: "hello",
+                            data: {{ values | safe }},
+                            borderColor: "#5D8BF4",
+                            backgroundColor: gradient,
+                            fill: true,
+                            lineTension: 0.1,
+                            pointBackgroundColor: "rgba(173, 53, 186, 0.1)"
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: false // Hide legend
+                    }
+                } 
+
+            });
+        </script>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

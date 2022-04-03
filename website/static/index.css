@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    word-break: normal;
+}
+
+body {
+    background-color: #EAF1F5;
+    color: black;
+}
+
+.main {
+    transition: margin-left .5s;
+    
+}
+
+.wrapper {
+    max-width: 90%;
+
+    margin: 0 auto;
+}
+
+.profile {
+    background-color: #5D8BF4;
+
+    min-height: 200px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    bottom: 0;
+}
+.profile_content {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+
+.lt-footer {
+    bottom: 0;
+    text-align: center;
+    color: grey;
+    margin-bottom: 30px;
+}
+
+
+.linktree a i {
+    float: right;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+#stw {
+    background-color: #F10086;
+    color: white;
+    border: none;
+    text-align: center;
+}
+  
+.info-div {
+    background-color: #711A75;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
+
+    padding: 0.4em;
+
+    max-width: 400px;
+    width: 90%;
+
+    text-align: left;
+
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.profile p {
+    max-width: 400px;
+}
+
+.linktree {
+  text-align: center;
+  margin-bottom:70px;
+}
+
+.linktree h2 {
+  padding-bottom: 20px;
+}
+
+
+.linktree i {
+	position: right;
+}
+
+
+.profile {
+  align-items: center;
+  text-align: center;
+}
+
+.profile p {
+  margin-top: 10px;
+}
+
+.profile img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.linktree-marg {
+  height: 40px;
+  width: 100%;
+}
+
+.btn-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  
+    padding: 0.4em;
+  
+    max-width: 400px;
+    width: 90%;
+    
+    text-align: center;
+  
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F10086;
+    background: none;
+    color: white;
+}
+
+.btn-toggle:hover {
+
+    background-color: #F10086;
+    border-color: #F10086;
+    color:rgb(255, 255, 255);
+    transition: ease-out 200ms;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #F10086;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #F10086;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  canvas {
+    margin: 0 auto;
+    height: 400px;
+    max-height: 90%;
+    width: 600px;
+    max-width: 90%;
+    color: #711A75;
+  }
+
+.chart_wrapper {
+  background-color: #ffffff;
+  display: inline-block; 
+  vertical-align: top;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 40px;
+
+  padding: 0.4em;
+
+  max-width: 650px;
+  width: 90%;
+
+  text-align: left;
+
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.chart_wrapper:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 35px rgb(197, 197, 197);
+}
+
+.card {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* msie */
+  display: inline-block; 
+  vertical-align: top;
+  background-color: #ffffff;
+  margin-left: 20px;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  max-width: 250px;
+  width: 90%;
+
+
+  text-align: center;
+
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.card:hover{
+    opacity: 1;
+    filter: none; /* msie */
+  background-color: white;
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 35px rgb(197, 197, 197);
+}
+
+.card p {
+    margin-top: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: left;
+}
+
+.card img {
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.stat_card {
+    display: inline-block; 
+    vertical-align: top;
+    background-color: #ffffff;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+  
+    max-width: 250px;
+    width: 90%;
+  
+  
+    text-align: left;
+  
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+  }
+  
+  .stat_card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 35px rgb(197, 197, 197);
+  }
+  
+  .stat_card p {
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
+}
+
+.yes_card {
+    display: inline-block; 
+    vertical-align: top;
+    background-color: #ffffff;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+  
+    max-width: 250px;
+    width: 90%;
+  
+  
+    text-align: center;
+  
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+  
+  .yes_card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 35px rgb(197, 197, 197);
+}
+  
+.yes_card p {
+      margin-top: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    text-align: left;
+}
+  
+.yes_card img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+}
+
+.loginbutton {
+    background-color:#5D8BF4;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+}

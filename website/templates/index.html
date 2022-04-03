@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="main">
+  <div class="color-background"></div>
+  <div class="profile">
+    <div class="profile_content">
+      <h1>Welcome to {{bot_name}} Dashboard!</h1>
+    </div>
+  </div>
+  <div class="linktree-marg"></div>
+  <div class="wrapper">
+    <div class="linktree">
+		<p>
+			{% if not authorized %}
+			<a class="loginbutton" href="/login">Login with discord</a>
+			{% else %}
+			<a class="loginbutton" href="/dashboard">Open Dashboard</a>
+			{%endif %}
+		</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="main">
+  <div class="color-background"></div>
+  <div class="profile">
+    <div class="profile_content">
+      <h1>{{bot_name}} Dashboard!</h1>
+    </div>
+  </div>
+  <div class="linktree-marg"></div>
+  <div class="wrapper">
+    <div class="linktree">
+      <h2>The Bot is in: {{guild_count}} servers</h2>
+      <h3>Hello, <b>{{username}}</b>! Please select a server to get started</h3>
+      {% for guild in guilds %}
+      <a href="/dashboard/{{guild.id}}">
+
+          <div class="{{guild.class_color}}">
+              {% if guild.icon_url is not none %}
+              <img src="{{guild.icon_url}}"/>
+              {% else %}
+              <img src="./static/server_default.png"/>
+              {% endif %}
+            <br />
+            <p>{{ guild.name }}</p>
+          </div>
+
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+
+<!DOCKTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="{{ url_for('static', filename='GoodDrinksWebsiteIcon.png') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <title>{% block title %}Home{% endblock %} | Analytics</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+
+        <!-- ... other tags like title, link, charset, viewport -->
+        <meta property="og:title" content="Sarguhl" />
+        <meta
+        property="og:description"
+        content="Hey you! Yeah exactly you. I'm Sarguhl - the developer of this shitty ass website. So come check me out!"
+        />
+        <meta
+        property="og:image"
+        content="./media/media/Shroom_v6.jpg"
+        />
+    </head>
+    <body>
+
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+        <div class="container">{% block content %} {% endblock %}</div>
+
+    </body>
+    {% extends 'footer.html' %}
+</html>
